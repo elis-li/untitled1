@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/dedsign/colors.dart';
 
 class VehicleList extends StatelessWidget{
   const VehicleList({super.key});
@@ -15,11 +16,14 @@ class VehicleList extends StatelessWidget{
   Widget _list(){
     return ListView.separated(
         itemCount: 15,
+        padding: EdgeInsets.only (left: 16, right: 16, top: 16),
         separatorBuilder: (BuildContext context, int index){
           return const SizedBox(height: 8);
 
         },
-        itemBuilder: itemBuilder
+        itemBuilder: (BuildContext context, int index){
+          return Container(height: 64, color: surfaceColor);
+        }
     );
   }
   Widget _updateButton(){
