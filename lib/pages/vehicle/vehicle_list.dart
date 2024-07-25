@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/colors.dart';
+import 'package:untitled1/pages/vehicle/vehicle_item.dart';
 
 class VehicleList extends StatelessWidget{
   const VehicleList({super.key});
@@ -22,7 +23,7 @@ class VehicleList extends StatelessWidget{
 
         },
         itemBuilder: (BuildContext context, int index){
-          return Container(height: 64, color: surfaceColor);
+          return const VehicleItem();
         }
     );
   }

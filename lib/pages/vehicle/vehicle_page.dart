@@ -17,6 +17,7 @@ class VehiclePage extends StatelessWidget {
               fontSize: fontSize16,
               fontWeight: FontWeight.w500,
             )),
+        centerTitle: true,
         elevation: 0,
         backgroundColor: surfaceColor,
       ),
