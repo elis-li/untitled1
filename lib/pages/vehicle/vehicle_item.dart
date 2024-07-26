@@ -11,7 +11,7 @@ class VehicleItem extends StatelessWidget {
     return Card(
         color: surfaceColor,
         margin: EdgeInsets.zero,
-        elevation: 0.06,
+        elevation: elevation006,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius8)),
         child: InkWell(
