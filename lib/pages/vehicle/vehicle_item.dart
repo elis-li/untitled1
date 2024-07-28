@@ -8,7 +8,9 @@ class VehicleItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return SizedBox(
+      height: height64,
+    child: Card(
         color: surfaceColor,
         margin: EdgeInsets.zero,
         elevation: elevation006,
@@ -22,12 +24,28 @@ class VehicleItem extends StatelessWidget {
               child: Row(
                 children: <Widget>[vehicleMotorcycleImage, _title(), _state()],
               )),
-        ));
+        )));
   }
 }
 
 Widget _title() {
-  return Container();
+  return Column (
+    crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: const <Widget>[
+      Text('BMW', style: TextStyle(
+        color: secondaryColor,
+        fontSize: fontSize14,
+        fontWeight: FontWeight.w600
+      )),
+      Text('No driver', style: TextStyle(
+          color: secondaryVariantColor,
+          fontSize: fontSize14,
+          fontWeight: FontWeight.w400
+      )),
+
+    ],
+  );
 }
 
 Widget _state() {
