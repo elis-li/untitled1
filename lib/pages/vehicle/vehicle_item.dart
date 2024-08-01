@@ -29,11 +29,13 @@ class VehicleItem extends StatelessWidget {
 }
 
 Widget _title() {
-  return Column (
+  return Padding(
+    padding: const EdgeInsets.only(left: padding6),
+  child: Column (
     crossAxisAlignment: CrossAxisAlignment.start,
     mainAxisAlignment: MainAxisAlignment.center,
-    children: const <Widget>[
-      Text('BMW', style: TextStyle(
+    children: <Widget>[
+      const Text('BMW', style: TextStyle(
         color: secondaryColor,
         fontSize: fontSize14,
         fontWeight: FontWeight.w600
@@ -43,8 +45,22 @@ Widget _title() {
           fontSize: fontSize14,
           fontWeight: FontWeight.w400
       )),
+      RichText(text: const TextSpan(
+        style: TextStyle(fontSize: fontSize14),
+        children: <TextSpan>[
+          TextSpan(text: 'Driver', style: TextStyle(
+            color: secondaryVariantColor,
+            fontWeight: FontWeight.w400
+          )),
+          TextSpan(text: 'Paul', style: TextStyle(
+            color: secondaryColor,
+            fontWeight: FontWeight.w600
+          ))
 
-    ],
+        ]
+      ))
+
+    ]),
   );
 }
 
