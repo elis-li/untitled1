@@ -11,7 +11,7 @@ class VehiclePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dispatcher by kiparo.com',
+        title: const Text('Dispatcher',
             style: TextStyle(
               color: primaryColor,
               fontSize: fontSize16,
