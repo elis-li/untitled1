@@ -11,3 +11,4 @@ const double elevation0 = 0;
 const double radius20 = 20;
 const double width200 = 200;
 const double height40 = 40;
+const double height8 = 8;
