@@ -1,47 +1,44 @@
-
 import 'package:flutter/material.dart';
 import '../../dedsign/dimensions.dart';
 import '../../dedsign/widgets/accent_button.dart';
 import 'vehicle_item.dart';
 
-class VehicleList extends StatelessWidget{
+class VehicleList extends StatelessWidget {
   const VehicleList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        _list(context),
-        Align(alignment: Alignment.bottomCenter, child: _updateButton())
-
-      ]);
+    return Stack(children: <Widget>[
+      _list(context),
+      Align(alignment: Alignment.bottomCenter, child: _updateButton())
+    ]);
   }
-  Widget _list(BuildContext context){
-    final safeBottomPadding = MediaQuery.of(context).padding.bottom;
-    final bottomPadding = (safeBottomPadding + height8)*2 + height40;
 
+  Widget _list(BuildContext context) {
+    final safeBottomPadding = MediaQuery.of(context).padding.bottom;
+    final bottomPadding = (safeBottomPadding + height8) * 2 + height40;
 
     return ListView.separated(
         itemCount: 15,
-        padding: EdgeInsets.only (
+        padding: EdgeInsets.only(
             left: padding16,
             right: padding16,
             top: padding16,
-            bottom: safeBottomPadding),
-        separatorBuilder: (BuildContext context, int index){
+            bottom: bottomPadding),
+        separatorBuilder: (BuildContext context, int index) {
           return const SizedBox(height: 8);
-
         },
-        itemBuilder: (BuildContext context, int index){
+        itemBuilder: (BuildContext context, int index) {
           return const VehicleItem();
-        }
-    );
+        });
   }
-  Widget _updateButton(){
-    return SafeArea(child: Padding(
-      padding: const EdgeInsets.only(left: padding16, right: padding16, bottom: padding8),
-      child: AccentButton(title: 'Update' , onTap: (){} ),
+
+  Widget _updateButton() {
+    return SafeArea(
+        child: Padding(
+      padding: const EdgeInsets.only(
+          left: padding16, right: padding16, bottom: padding8),
+      child: AccentButton(title: 'Update', onTap: () {}),
     ));
   }
-
 }
