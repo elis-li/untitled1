@@ -7,3 +7,7 @@ const double padding6 = 6;
 const double fontSize12 = 12;
 const double padding16 = 16;
 const double padding8 = 8;
+const double elevation0 = 0;
+const double radius20 = 20;
+const double width200 = 200;
+const double height40 = 40;

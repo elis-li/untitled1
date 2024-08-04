@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:untitled1/dedsign/colors.dart';
-import 'package:untitled1/pages/vehicle/vehicle_item.dart';
 
+import 'package:flutter/material.dart';
 import '../../dedsign/dimensions.dart';
+import '../../dedsign/widgets/accent_button.dart';
+import 'vehicle_item.dart';
 
 class VehicleList extends StatelessWidget{
   const VehicleList({super.key});
@@ -30,7 +30,7 @@ class VehicleList extends StatelessWidget{
     );
   }
   Widget _updateButton(){
-    return Container();
+    return AccentButton(title: 'Update' , onTap: (){} );
   }
 
 }

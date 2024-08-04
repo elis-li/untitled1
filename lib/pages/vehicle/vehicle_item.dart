@@ -62,7 +62,7 @@ Widget _title() {
                   style: TextStyle(fontSize: fontSize14),
                   children: <TextSpan>[
                 TextSpan(
-                    text: 'Driver',
+                    text: 'Driver: ',
                     style: TextStyle(
                         color: secondaryVariantColor,
                         fontWeight: FontWeight.w400)),
