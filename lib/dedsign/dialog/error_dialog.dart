@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/colors.dart';
 import 'package:untitled1/dedsign/widgets/accent_button.dart';
-
 import '../dimensions.dart';
+import '../styles.dart';
 
 class ErrorDialog extends StatelessWidget {
   final String description;
@@ -20,26 +20,18 @@ class ErrorDialog extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-            const Text('Oops',
-                style: TextStyle(
-                    color: secondaryColor,
-                    fontSize: fontSize24,
-                    fontWeight: FontWeight.w600)),
-            const SizedBox(height: height8),
-            Text(description,
-                style: const TextStyle(
-                    color: secondaryColor,
-                    fontSize: fontSize16,
-                    fontWeight: FontWeight.w400)),
-            const SizedBox(height: height20),
-            Center(
-              child: AccentButton(
-                  title: 'OK',
-                  onTap: () {
-                    Navigator.pop(context);
-                  }),
-            )
-          ]),
+                const Text('Oops', style: headTextStyle),
+                const SizedBox(height: height8),
+                Text(description, style: body1TextStyle),
+                const SizedBox(height: height20),
+                Center(
+                  child: AccentButton(
+                      title: 'OK',
+                      onTap: () {
+                        Navigator.pop(context);
+                      }),
+                )
+              ]),
         ));
   }
 }

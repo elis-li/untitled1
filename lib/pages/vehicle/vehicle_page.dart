@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/colors.dart';
 import 'package:untitled1/dedsign/dimensions.dart';
 import 'package:untitled1/pages/vehicle/vehicle_list.dart';
-
+import '../../dedsign/styles.dart';
 
 class VehiclePage extends StatelessWidget {
   const VehiclePage({super.key});
@@ -11,12 +11,7 @@ class VehiclePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dispatcher',
-            style: TextStyle(
-              color: primaryColor,
-              fontSize: fontSize16,
-              fontWeight: FontWeight.w500,
-            )),
+        title: const Text('Dispatcher', style: primaryTextStyle),
         centerTitle: true,
         elevation: 0,
         backgroundColor: surfaceColor,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/colors.dart';
 import 'package:untitled1/dedsign/dimensions.dart';
+import '../styles.dart';
 
 class AccentButton extends StatelessWidget {
   final String title;
@@ -20,14 +21,9 @@ class AccentButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(radius20)),
             padding: EdgeInsets.only(left: padding16, right: padding16)),
-        child: Text(
-          title,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(
-              color: surfaceColor,
-              fontSize: fontSize14,
-              fontWeight: FontWeight.w600),
-        ));
+        child: Text(title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: accentButtonTextStyle));
   }
 }

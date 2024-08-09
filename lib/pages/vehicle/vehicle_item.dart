@@ -3,6 +3,8 @@ import 'package:untitled1/dedsign/colors.dart';
 import 'package:untitled1/dedsign/dimensions.dart';
 import 'package:untitled1/dedsign/images.dart';
 
+import '../../dedsign/styles.dart';
+
 class VehicleItem extends StatelessWidget {
   const VehicleItem({super.key});
 
@@ -20,7 +22,8 @@ class VehicleItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(radius8),
               onTap: () {},
               child: Padding(
-                  padding: const EdgeInsets.only(left: padding8, right: padding16),
+                  padding:
+                      const EdgeInsets.only(left: padding8, right: padding16),
                   child: Row(
                     children: <Widget>[
                       vehicleMotorcycleImage,
@@ -34,7 +37,7 @@ class VehicleItem extends StatelessWidget {
 
 Widget _title() {
   return Expanded(
-  child: Padding(
+      child: Padding(
     padding: const EdgeInsets.only(left: padding6),
     child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,33 +46,18 @@ Widget _title() {
           const Text('BMW',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                  color: secondaryColor,
-                  fontSize: fontSize14,
-                  fontWeight: FontWeight.w600)),
+              style: body2TextStyle),
           //if (false)[
           //Text('No driver',
-          // style: TextStyle(
-          // color: secondaryVariantColor,
-          // fontSize: fontSize14,
-          // fontWeight: FontWeight.w400
-          //)),]
+          // style: body3TextStyle,
+          // ),]
           // else
           RichText(
-            maxLines: 1,
+              maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              text: const TextSpan(
-                  style: TextStyle(fontSize: fontSize14),
-                  children: <TextSpan>[
-                TextSpan(
-                    text: 'Driver: ',
-                    style: TextStyle(
-                        color: secondaryVariantColor,
-                        fontWeight: FontWeight.w400)),
-                TextSpan(
-                    text: 'Paul',
-                    style: TextStyle(
-                        color: secondaryColor, fontWeight: FontWeight.w600))
+              text: const TextSpan(children: <TextSpan>[
+                TextSpan(text: 'Driver: ', style: body3TextStyle),
+                TextSpan(text: 'Paul', style: body5TextStyle)
               ]))
         ]),
   ));
@@ -77,15 +65,14 @@ Widget _title() {
 
 Widget _state() {
   return InkWell(
-    onTap: (){},
-  child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-    statePickupImage,
-    const Text('pickup',
-        style: TextStyle(
-            color: secondaryColor,
-            fontSize: fontSize12,
-            fontWeight: FontWeight.w400))
-  ]));
+      onTap: () {},
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            statePickupImage,
+            const Text(
+              'pickup',
+              style: body4TextStyle,
+            )
+          ]));
 }
