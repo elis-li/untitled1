@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'package:untitled1/dedsign/colors.dart';
+import 'package:untitled1/dedsign/dimensions.dart';
+import 'package:untitled1/dedsign/images.dart';
+import '../../dedsign/styles.dart';
+import 'driver_list.dart';
+
+class DriverPage extends StatelessWidget {
+  const DriverPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Select driver', style: primaryTextStyle),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: surfaceColor,
+        leading: IconButton(icon: arrowBackImage, onPressed: (){
+          Navigator.pop(context);
+        }),
+      ),
+      body: Container(color: backgroundColor, child: const DriverList()),
+    );
+  }
+}
