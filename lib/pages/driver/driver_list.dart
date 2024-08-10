@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/dedsign/dialog/error_dialog.dart';
+import 'package:untitled1/dedsign/colors.dart';
 import '../../dedsign/dimensions.dart';
 import '../../dedsign/widgets/accent_button.dart';
 
@@ -10,7 +10,7 @@ class DriverList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
       _list(context),
-      Align(alignment: Alignment.bottomCenter, child: _updateButton(context))
+      Align(alignment: Alignment.bottomCenter, child: _saveButton(context))
     ]);
   }
 
@@ -29,29 +29,23 @@ class DriverList extends StatelessWidget {
           return const SizedBox(height: 8);
         },
         itemBuilder: (BuildContext context, int index) {
-          return const Container();
+          return Container(
+              color: surfaceColor,
+              height: 64
+          );
         });
   }
 
-  Widget _updateButton(BuildContext context) {
+  Widget _saveButton(BuildContext context) {
     return SafeArea(
         child: Padding(
       padding: const EdgeInsets.only(
           left: padding16, right: padding16, bottom: padding8),
       child: AccentButton(
-          title: 'Update',
+          title: 'Save',
           onTap: () {
-            _showErrorDialog(context);
           }),
     ));
   }
 
-  void _showErrorDialog(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return ErrorDialog(
-              description: 'Server is unavailable, Please try again later.');
-        });
-  }
-}
+
