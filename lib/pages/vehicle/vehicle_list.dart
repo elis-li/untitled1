@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/dialog/error_dialog.dart';
+import 'package:untitled1/pages/driver/driver_page.dart';
 import '../../dedsign/dimensions.dart';
+import '../../dedsign/util/size_util.dart';
 import '../../dedsign/widgets/accent_button.dart';
 import 'vehicle_item.dart';
 
@@ -16,21 +18,20 @@ class VehicleList extends StatelessWidget {
   }
 
   Widget _list(BuildContext context) {
-    final safeBottomPadding = MediaQuery.of(context).padding.bottom;
-    final bottomPadding = (safeBottomPadding + height8) * 2 + height40;
-
     return ListView.separated(
         itemCount: 15,
         padding: EdgeInsets.only(
             left: padding16,
             right: padding16,
             top: padding16,
-            bottom: bottomPadding),
+            bottom: getListBottomPadding(context)),
         separatorBuilder: (BuildContext context, int index) {
           return const SizedBox(height: 8);
         },
         itemBuilder: (BuildContext context, int index) {
-          return const VehicleItem();
+          return VehicleItem(onTap: () async {
+            _showDriverPage(context);
+          });
         });
   }
 
@@ -54,5 +55,11 @@ class VehicleList extends StatelessWidget {
           return ErrorDialog(
               description: 'Server is unavailable, Please try again later.');
         });
+  }
+
+  Future <void> _showDriverPage(BuildContext context) async {
+    await Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return const DriverPage();
+    }));
   }
 }
