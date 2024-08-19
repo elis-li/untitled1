@@ -52,7 +52,7 @@ class VehicleList extends StatelessWidget {
     showDialog(
         context: context,
         builder: (BuildContext context) {
-          return ErrorDialog(
+          return const ErrorDialog(
               description: 'Server is unavailable, Please try again later.');
         });
   }

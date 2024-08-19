@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/dedsign/widgets/accent_button.dart';
 import '../dimensions.dart';
 import '../styles.dart';
+import '../widgets/accent_button.dart';
 
 class ErrorDialog extends StatelessWidget {
   final String description;

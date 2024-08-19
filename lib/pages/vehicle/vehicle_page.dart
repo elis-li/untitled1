@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/dedsign/colors.dart';
-import 'package:untitled1/dedsign/dimensions.dart';
 import 'package:untitled1/pages/vehicle/vehicle_list.dart';
 import '../../dedsign/styles.dart';
 

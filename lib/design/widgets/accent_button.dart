@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/dedsign/colors.dart';
-import 'package:untitled1/dedsign/dimensions.dart';
+import '../colors.dart';
+import '../dimensions.dart';
 import '../styles.dart';
 
 class AccentButton extends StatelessWidget {

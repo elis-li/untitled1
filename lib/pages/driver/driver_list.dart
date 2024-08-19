@@ -37,13 +37,12 @@ class DriverList extends StatelessWidget {
   Widget _saveButton(BuildContext context) {
     return SafeArea(
         child: Padding(
-      padding: const EdgeInsets.only(
-          left: padding16, right: padding16, bottom: padding8),
-      child: AccentButton(
-          title: 'Save',
-          onTap: () {
-          }),
-    ));
+          padding: const EdgeInsets.only(
+              left: padding16, right: padding16, bottom: padding8),
+          child: AccentButton(
+              title: 'Save',
+              onTap: () {}),
+        ));
   }
-
+}
 
