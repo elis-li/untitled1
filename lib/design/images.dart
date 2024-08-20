@@ -40,7 +40,7 @@ final SvgPicture stateBoardingImage =
 SvgPicture.asset('assets/images/state-boarding.svg');
 
 final SvgPicture arrowBackImage =
-SvgPicture.asset('assets/images/arrow_back.svg');
+SvgPicture.asset('assets/images/arrow_back kiparo.svg');
 
 final SvgPicture accountCircleImage =
 SvgPicture.asset('assets/images/account_circle.svg');

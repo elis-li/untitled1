@@ -30,7 +30,7 @@ class VehicleList extends StatelessWidget {
         },
         itemBuilder: (BuildContext context, int index) {
           return VehicleItem(onTap: () async {
-            _showDriverPage(context);
+            await _showDriverPage(context);
           });
         });
   }
