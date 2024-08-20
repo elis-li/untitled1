@@ -15,3 +15,4 @@ const double height8 = 8;
 const double fontSize24 = 24;
 const double height20 = 20;
 const double width16 = 16;
+const double height16 = 16;
