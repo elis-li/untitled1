@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/dedsign/images.dart';
 import '../../dedsign/dimensions.dart';
 import '../../dedsign/util/size_util.dart';
 import '../../dedsign/widgets/accent_button.dart';
@@ -34,7 +35,14 @@ class _DriverListState extends State<DriverList> {
         },
         itemBuilder: (BuildContext context, int index) {
           final bool isSelected = _selectedDriverIndex == index;
-          return DriverItem(
+          return SelectableItem(
+              image: accountCircleImage,
+              leftPadding: padding16,
+              onTap: () {
+    setState(() {
+    _selectedDriverIndex = index})}
+              title: 'Paul',
+              isSelected: isSelected)
               driverName: 'Paul',
               isSelected: isSelected,
               onTap: () {
