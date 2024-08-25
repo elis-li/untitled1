@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../dedsign/dimensions.dart';
 import '../../dedsign/util/size_util.dart';
 import '../../dedsign/widgets/accent_button.dart';
-import 'driver_item.dart';
+import '../../dedsign/widgets/selectable_item.dart';
 
 class DriverList extends StatefulWidget {
   const DriverList({super.key});
