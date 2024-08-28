@@ -4,6 +4,7 @@ import 'package:untitled1/pages/driver/driver_page.dart';
 import '../../dedsign/dimensions.dart';
 import '../../dedsign/util/size_util.dart';
 import '../../dedsign/widgets/accent_button.dart';
+import '../vehicle_state/vehicle_state_page.dart';
 import 'vehicle_item.dart';
 
 class VehicleList extends StatelessWidget {
@@ -31,7 +32,9 @@ class VehicleList extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return VehicleItem(onTap: () async {
             await _showDriverPage(context);
-          });
+          }, onStateTap: () async {
+            await _showVehicleStatePage(context);
+          },);
         });
   }
 
@@ -63,3 +66,10 @@ class VehicleList extends StatelessWidget {
     }));
   }
 }
+
+Future <void> _showVehicleStatePage(BuildContext context) async {
+  await Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return const VehicleStatePage();
+  }));
+}
+

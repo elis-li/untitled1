@@ -5,15 +5,15 @@ import '../../dedsign/util/size_util.dart';
 import '../../dedsign/widgets/accent_button.dart';
 import '../../dedsign/widgets/selectable_item.dart';
 
-class DriverList extends StatefulWidget {
-  const DriverList({super.key});
+class VehicleStateList extends StatefulWidget {
+  const VehicleStateList({super.key});
 
   @override
-  State<DriverList> createState() => _DriverListState();
+  State<VehicleStateList> createState() => _VehicleStateListState();
 }
 
-class _DriverListState extends State<DriverList> {
-  int? _selectedDriverIndex;
+class _VehicleStateListState extends State<VehicleStateList> {
+  int? _selectedStateIndex;
   @override
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
@@ -34,15 +34,15 @@ class _DriverListState extends State<DriverList> {
           return const SizedBox(height: 8);
         },
         itemBuilder: (BuildContext context, int index) {
-          final bool isSelected = _selectedDriverIndex == index;
+          final bool isSelected = _selectedStateIndex == index;
           return SelectableItem(
-              image: accountCircleImage,
-              leftPadding: padding8,
-              title: 'Paul',
+              image: statePickupImage,
+              leftPadding: padding16,
+              title: 'Pickup',
               isSelected: isSelected,
               onTap: () {
                 setState(() {
-                  _selectedDriverIndex = index;
+                  _selectedStateIndex = index;
                 });
               });
         });

@@ -36,7 +36,7 @@ class SelectableItem extends StatelessWidget {
               onTap: onTap,
               child: Padding(
                   padding:
-                      const EdgeInsets.only(left: padding8, right: padding16),
+                      EdgeInsets.only(left: leftPadding, right: padding16),
                   child: Row(
                     children: <Widget>[
                       image,
