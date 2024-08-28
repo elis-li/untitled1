@@ -36,7 +36,7 @@ class VehicleItem extends StatelessWidget {
                   )),
             )));
   }
-}
+
 
 Widget _title() {
   return Expanded(
@@ -78,4 +78,4 @@ Widget _state() {
               style: body4TextStyle,
             )
           ]));
-}
+}}
